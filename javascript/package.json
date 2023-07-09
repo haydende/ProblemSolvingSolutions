@@ -1,0 +1,11 @@
+{
+  "name": "problem-solving-solutions",
+  "version": "0.0.0",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "private": true,
+  "devDependencies": {
+    "jasmine": "^5.0.2"
+  }
+}
