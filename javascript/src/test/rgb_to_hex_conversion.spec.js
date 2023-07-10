@@ -11,19 +11,19 @@ describe("RGB to Hex Conversion :: Tests", () => {
     })
 
     it('255,255,255', () => {
-        expect(rgb(255,255,255)).toBe('ffffff');
+        expect(rgb(255,255,255)).toBe('FFFFFF');
     })
 
     it('254,254,254', () => {
-        expect(rgb(254,254,254)).toBe('fefefe');
+        expect(rgb(254,254,254)).toBe('FEFEFE');
     })
 
     it('256,256,256', () => {
-        expect(rgb(256,256,256)).toBe('ffffff');
+        expect(rgb(256,256,256)).toBe('FFFFFF');
     })
 
     it('2000,200,2000', () => {
-        expect(rgb(2000,200,2000)).toBe('ffc8ff')
+        expect(rgb(2000,200,2000)).toBe('FFC8FF')
     })
 
 })
