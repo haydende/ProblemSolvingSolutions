@@ -4,3 +4,8 @@
 
 # JavaScript
 javascript/node_modules
+
+# kotlin/java
+*.jar
+kotlin/.gradle
+kotlin/app/build
