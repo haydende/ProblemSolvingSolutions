@@ -5,26 +5,54 @@ import kotlin.test.assertEquals
 
 class RepeatedStringTest {
 
+    /**
+     * Input:
+     * - s: aba
+     * - n: 10
+     *
+     * Expected output: 7
+     */
     @Test
-    fun aba_10_should_be_7() {
+    fun sampleTestCase0() {
         val actual = repeatedString("aba", 10L)
         assertEquals(7L, actual)
     }
 
+    /**
+     * Input:
+     * - s: a
+     * - n: 1000000000000
+     *
+     * Expected output: 1000000000000
+     */
     @Test
-    fun a_1000000000000_should_be_1000000000000() {
+    fun sampleTestCase1() {
         val actual = repeatedString("a", 1000000000000L)
         assertEquals(1000000000000L, actual)
     }
 
+    /**
+     * Input:
+     * - s: ab
+     * - n: 1000000000000
+     *
+     * Expected output: 500000000000
+     */
     @Test
-    fun ab_1000000000000_should_be_500000000000() {
+    fun customTestCase0() {
         val actual = repeatedString("ab", 1000000000000L)
         assertEquals(500000000000L, actual)
     }
 
+    /**
+     * Input:
+     * - s: aba
+     * - n: 1000000000000
+     *
+     * Expected output: 666666666667L
+     */
     @Test
-    fun aba_1000000000000_should_be_670000000000() {
+    fun customTestCase1() {
         val actual = repeatedString("aba", 1000000000000L)
         assertEquals(666666666667L, actual)
     }
@@ -55,9 +83,20 @@ class RepeatedStringTest {
         assertEquals(16481469408, actual)
     }
 
+    // s.length = 100
+    // 46 a's in s = 0.46/46%
+    // 860622337747 * 0.46 = 395886275363.62
+
+    // target length (t) = 860622337747
+    // t / s.length = 8606223377.47
+    // number of a's in s at length 8606223377 = 3958862753
+    // number of a's in first 47% of s = 19
+    // 3958862753 + 19 = 3958862772
+
     /**
      * Input:
      * - s: babbaabbabaababaaabbbbbbbababbbabbbababaabbbbaaaaabbaababaaabaabbabababaabaabbbababaabbabbbababbaabb
+     * - s: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
      * - n: 860622337747
      *
      * Expected Output: 395886275361
@@ -68,6 +107,19 @@ class RepeatedStringTest {
             "babbaabbabaababaaabbbbbbbababbbabbbababaabbbbaaaaabbaababaaabaabbabababaabaabbbababaabbabbbababbaabb", 860622337747L
         )
         assertEquals(395886275361L, actual)
+    }
+
+    /**
+     * Input:
+     * - s: cfimaakj
+     * - n: 554045874191
+     *
+     * Expected output: 138511468548
+     */
+    @Test
+    fun testCase21() {
+        val actual = repeatedString("cfimaakj", 554045874191L)
+        assertEquals(138511468548L, actual)
     }
 
 }
